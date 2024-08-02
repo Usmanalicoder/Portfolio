@@ -1,0 +1,659 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;    
+}
+body
+{
+    color: #ededed;
+}
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #ad21ad;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards calc(0.2s * var(--1));
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+}
+.navbar a:hover{
+    color: #800080;
+}
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    background: url(Purple2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    box-sizing: border-box;
+}
+.home-content {
+    max-width: 680px;
+}
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+.home-content h3:nth-last-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop is ease forwards;
+    animation-delay: .7s;
+}
+.home-content h3 span {
+    color: #2c032c;
+}
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 28px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-scl a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 48px;
+    background: transparent;
+    border: 2px solid #200220;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #800080;
+    text-decoration: none;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--delay-factor));
+    margin: 30px 15px 0;
+}
+
+.home-scl a:hover{
+    background: #800080;
+    color: #200220;
+    box-shadow: 0 0 20px #800080;
+}
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #800080;
+    border-radius: 48px;
+    font-size: 16px;
+    color: #130413;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #500650,
+                0 0 25px #520552;
+    margin-top: 20px;
+    text-align: center;
+}
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-box:hover{
+    box-shadow: 0 0 5px purple,
+    0 0 25px purple, 0 0 50px purple,
+    0 0 100px purple, 0 0 200px purple
+}
+/* Styling the section */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    align-items: center; /* Align items vertically in the center */
+    gap: 1.5rem; /* Gap between grid items */
+}
+.about img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+.about-text h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-text h2, .about-text h4 {
+    text-align: center;
+}
+
+.about-text p {
+    text-align: justify;
+    line-height: 1.6;
+}
+.about {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0; /* Corrected comma to space in padding value */
+}
+
+/* Styling the section */
+section {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Styling the services container */
+.services {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(61, 39, 39, 0.1);
+    padding: 20px;
+}
+
+/* Styling the sub-title */
+.sub-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+/* Styling the service list */
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Styling each service box */
+.service-list > div {
+    flex: 1;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-list > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgb(36, 94, 202);
+}
+
+/* Styling service icons */
+.service-list i {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+/* Styling service titles */
+.service-list h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Styling service descriptions */
+.service-list p {
+    font-size: 25px;
+    color: #f3f3f3;
+    margin-bottom: 20px;
+}
+.read {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #06b3b3;
+    border-radius: 20px;
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 400;
+    opacity: 0;
+    font-weight: bold;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px rgb(116, 4, 116),
+                0 0 25px rgb(73, 4, 73);
+}
+
+.read:hover {
+    box-shadow: 0 0 5px rgb(92, 4, 92),
+    0 0 25px rgb(61, 6, 61), 0 0 50px rgb(68, 10, 68),
+    0 0 100px rgb(94, 20, 94), 0 0 200px rgb(68, 17, 68)
+}
+.service-list div:hover{
+    transform:  translateY(-10px);
+}
+/* Styling the section */
+section {
+    background: url(Purple2.png);
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Styling the sub-title */
+.sub-title {
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+
+/* Styling the skills container */
+.container1 {
+    background-color:transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(201, 179, 179, 0.1);
+    padding: 20px;
+}
+
+/* Styling the heading */
+.heading1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* Styling the skill bars */
+.Technical-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bar {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Styling the skill icons */
+.bar i {
+    font-size: 60px;
+}
+
+/* Styling the skill info */
+.info span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f3f3f3;
+}
+
+/* Styling the progress lines */
+.progress-line {
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-line span {
+    display: block;
+    height: 100%;
+    background-color: rgb(36, 9, 36); /* Purple color for progress */
+}
+
+/* Adding individual skill colors */
+.html span {
+    color: #10d4ba;
+}
+
+.css span {
+    color: #0c7466;
+}
+
+.Javascript span {
+    color: #09b47b1e;
+}
+
+.python span {
+    color: #b0bc1e;
+}
+
+.Cpp span {
+    color: #c32ec9;
+}
+
+.java span {
+    color: #69bcbc;
+}
+.progress-line.html span {
+    width: 90%;
+}
+.progress-line.css span {
+    width: 84%;
+}
+.progress-line.Javascript span{
+    width: 80%;
+}
+.progress-line.python span{
+    width: 95%;
+}
+.progress-line.Cpp span{
+    width: 70%;
+}
+.progress-line.java span{
+    width: 60%;
+}
+/* Style for the main-text section */
+.main-text {
+    text-align: center;
+}
+
+.main-text h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.main-text span {
+    color: white;
+}
+
+/* Style for the portfolio content */
+.portfolio-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.row {
+    position: relative;
+    width: 30%;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.row:hover .layer {
+    opacity: 1;
+}
+
+.layer h5 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.layer p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.layer a {
+    color: rgb(19, 135, 170);
+    font-size: 30px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* Style for the external link icon */
+.layer a i {
+    transition: color 0.3s ease;
+}
+
+.layer a:hover i {
+    color: yellow;
+}
+/* Styling for the contact section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    background-color: transparent;
+}
+
+.contact-text {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-text h2 {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.contact-text h4 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+.contact-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: white;
+}
+.contact-list{
+    margin-bottom: 3rem;
+    font-size: 30px;
+}
+.contact-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 48px;
+    background: transparent;
+    border: 2px solid #700a70;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--delay-factor));
+    margin: 30px 15px 0;
+}
+.contact-icons a:hover{
+    background: #800080;
+    color: #200220;
+    box-shadow: 0 0 20px #800080;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-form input[type=""],
+.contact-form input[type="email"],
+.contact-form input[type=""],
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form .send {
+    display: inline-block;
+    background-color: rgb(173, 22, 173);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .send:hover {
+    background-color: #059179;
+    box-shadow: 0 0 5px rgb(6, 106, 131),
+    0 0 25px rgb(9, 130, 160), 0 0 50px rgb(9, 143, 153),
+    0 0 100px rgb(6, 140, 180), 0 0 200px rgb(8, 136, 168)
+}
+
+/* Apply styles to the image container */
+.devpic {
+    width: 400px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    border-radius: 100%; /* Make the image round */
+    overflow: hidden; /* Hide any overflow from the rounded shape */
+}
+  
+  /* Style the image itself */
+.devpic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain the aspect ratio and cover the container */
+  }
+/* Define the keyframes */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to an element */
+.slide-animation {
+    animation: slideRight 1s ease-in-out forwards;
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to an element */
+.slide-animation {
+    animation: slideLeft 1s ease-in-out forwards;
+}
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.slide-animation {
+    animation: slideTop 1s ease-in-out forwards;
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/* Define the keyframes */
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to an element */
+.slide-bottom-animation {
+    animation: slideBottom 1s ease-in-out forwards;
+}
